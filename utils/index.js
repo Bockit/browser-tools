@@ -1,3 +1,5 @@
 module.exports = {
-    endsWith: require('./endsWith')
+    endsWith: require('./endswith')
+  , startsWith: require('./startswith')
+  , nodeName: require('./nodename')
 }
