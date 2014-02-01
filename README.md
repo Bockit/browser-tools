@@ -1,4 +1,4 @@
-**This is a work in progress**
+**This is a work in progress, half the code has never been run yet. Before I got any further I wanted to see how it would look.**
 
 Browser Tools
 -------------
