@@ -1,18 +1,25 @@
-var get = require('../attr/get')
-var set = require('../attr/set')
+var get = require('../attributes/get')
+var set = require('../attributes/set')
 
 module.exports = function toggleClass(el, cls, toggle) {
-    if (el.classList) return el.classList.toggle(cls, toggle)
+    if (el.classList) {
+        el.classList.toggle(cls, toggle)
+        return el
+    }
 
     var classes = get(el, 'class') || ''
     // Remove it
-    classes
+    classes = classes
         .replace(new RegExp('\\b' + cls + '\\b'), '')
         .replace(/\s\s+/g, '')
 
     if (toggle) {
-        classes += ' ' + toggle
+        classes += ' ' + cls
     }
 
-    return set(el, 'class', classes)
+    classes = classes.trim()
+
+    set(el, 'class', classes ? classes : null)
+
+    return el
 }

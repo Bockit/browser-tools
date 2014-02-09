@@ -6,5 +6,8 @@ module.exports = function setCss(el, prop, val) {
             setCss(el, key, prop[key])
         }
     }
-    return el.style[prefixed[prop]] = val
+    else {
+        el.style[prefixed[prop]] = val
+    }
+    return el
 }

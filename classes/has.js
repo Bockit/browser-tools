@@ -1,4 +1,4 @@
-var get = require('attr')
+var get = require('../attributes/get')
 
 module.exports = function hasClass(el, cls) {
     if (el.classList) return el.classList.contains(cls)

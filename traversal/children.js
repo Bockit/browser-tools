@@ -1,3 +1,3 @@
 module.exports = function children(el) {
-    return el.children
+    return Array.prototype.slice.call(el.children)
 }

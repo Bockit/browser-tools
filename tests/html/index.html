@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .border-box {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .content-box {
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                -ms-box-sizing: content-box;
+                -o-box-sizing: content-box;
+                box-sizing: content-box;
+            }
+
+            .fillRed {
+                width: 100%;
+                height: 100%;
+                background: red;
+            }
+
+            #widths-border-box,
+            #widths-content-box,
+            #heights-border-box,
+            #heights-content-box {
+                margin: 10px;
+                padding: 10px;
+                border: solid 10px;
+                width: 50px;
+                height: 50px;
+            }
+
+            #fixed-widths-border-box,
+            #fixed-widths-content-box,
+            #fixed-heights-border-box,
+            #fixed-heights-content-box {
+                position: fixed;
+                top: 30px;
+                left: 30px;
+                margin: 10px;
+                padding: 10px;
+                border: solid 10px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .relative-400-400 {
+                position: relative;
+                width: 400px;
+                height: 400px;
+            }
+
+            #absolute-widths-border-box,
+            #absolute-widths-content-box,
+            #absolute-heights-border-box,
+            #absolute-heights-content-box {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                margin: 10px;
+                padding: 10px;
+                border: solid 10px;
+                right: 30px;
+                bottom: 30px;
+            }
+
+            #nm-widths-border-box,
+            #nm-widths-content-box,
+            #nm-heights-border-box,
+            #nm-heights-content-box {
+                margin: -10px;
+                padding: 10px;
+                border: solid 10px;
+                width: 50px;
+                height: 50px;
+            }
+
+            #none-widths-border-box,
+            #none-widths-content-box,
+            #none-heights-border-box,
+            #none-heights-content-box {
+                margin: 10px;
+                padding: 10px;
+                border: solid 10px;
+                width: 50px;
+                height: 50px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="widths-border-box" class="border-box"></div>
+        <div id="widths-content-box" class="content-box"></div>
+        <div id="heights-border-box", class="border-box"></div>
+        <div id="heights-content-box", class="content-box"></div>
+
+        <div id="fixed-widths-border-box" class="border-box"></div>
+        <div id="fixed-widths-content-box" class="content-box"></div>
+        <div id="fixed-heights-border-box", class="border-box"></div>
+        <div id="fixed-heights-content-box", class="content-box"></div>
+
+        <div class="relative-400-400">
+            <div id="absolute-widths-border-box" class="border-box"></div>
+            <div id="absolute-widths-content-box" class="content-box"></div>
+            <div id="absolute-heights-border-box", class="border-box"></div>
+            <div id="absolute-heights-content-box", class="content-box"></div>
+        </div>
+
+        <div id="nm-widths-border-box" class="border-box"></div>
+        <div id="nm-widths-content-box" class="content-box"></div>
+        <div id="nm-heights-border-box", class="border-box"><div class="fillRed"></div></div>
+        <div id="nm-heights-content-box", class="content-box"><div class="fillRed"></div></div>
+
+        <div id="none-widths-border-box" class="border-box"></div>
+        <div id="none-widths-content-box" class="content-box"></div>
+        <div id="none-heights-border-box", class="border-box"></div>
+        <div id="none-heights-content-box", class="content-box"></div>
+
+        <svg id="widths-svg", width="400", height="400">
+            <rect id="width-svg" x="0" y="0" width="50" height="50"></rect>
+        </svg>
+
+        <script src="bundle.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </body>
+</html>
