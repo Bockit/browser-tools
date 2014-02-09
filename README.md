@@ -9,17 +9,19 @@ Browser tools is designed with browserify in mind, where it will only build the 
 
 Browser tools aims to provide the following functionality with a high granularity:
 
-* CSS getting and setting
 * Attributes getting, setting and removing
+* ClassList-like functionality
+* CSS getting and setting
 * Element dimension calculations
+* Events
+* DOM Manipulation
 * Element position calculations
 * DOM Traversal
-* ClassList-like functionality
 
 Support
 -------
 
-It's completely untested at the moment (as in, I haven't even run half the code once), but the idea is to support IE9+ for now. Either making a separate polyfill module that shims in what's needed for browser-tools, or make ie8 versions of functions which don't work.
+It's very poorly tests at the moment but the idea is to support IE9+ for now. Either making a separate polyfill module that shims in what's needed for browser-tools, or make ie8 versions of functions which don't work.
 
 No AJAX
 -------
@@ -29,18 +31,21 @@ There are plenty of modules for doing AJAX.
 Why one module
 --------------
 
-Because I think having a module for each function, considering the majority are a few lines, would be ridiculous. It's made so that
+Because I think having a module for each function would have too much overhead. It's made so that if you compile your code with something like browserify and use specific requires it will only include exactly what is used.
 
 To Do
 -----
 
-* Actually run half the code and make sure it works
+* Actually run the events and traversal functions to see if they work
+* Write the manipulation functions
 * Set up a test suite and a process to run it across the supported browsers
 * Make the tests pass
 * Add DOM events `on(el, 'mousemove', function(){})`, `off(...)`, `once(...)` and something for delegating. I dunno yet how it'd work.
 * More traversal functions `closest()`, `nextUntil()`, `prevUntil()`
 
-Blue sky
+Selector
 --------
 
-* Some kind of monad jquery-esque thing which selects elements and uses these functions to manipulate them.
+This project works well with [selector][selector]
+
+[selector]: /Bockit/selector
