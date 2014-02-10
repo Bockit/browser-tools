@@ -13,17 +13,24 @@ var cssNumbers = {
   , zIndex: true
   , zoom: true
 }
+var camelCase = function(str) {
+    return str.replace(/-([\da-z])/gi, function (all, letter) {
+        return letter.toUpperCase()
+    })
+}
 
 module.exports = function setCss(el, prop, val) {
     if (typeof prop === 'object') {
-        for (key in prop) {
+        for (var key in prop) {
             setCss(el, key, prop[key])
         }
     }
     else {
-        if (typeof val === 'number' && !cssNumbers[prop])
+        if (typeof val === 'number' && !(camelCase(prop) in cssNumbers))
             val += 'px'
-        el.style[prefixed[prop]] = val
+        // For camelcased properties
+        var propertie = prefixed[prop] || prop
+        el.style[propertie] = val
     }
     return el
 }
