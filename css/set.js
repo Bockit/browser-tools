@@ -1,4 +1,5 @@
 var prefixed = require('./prefix-map')()
+var camelCase = require('../utils/camelcase')
 
 // Properties that are number but can't have a px value
 var cssNumbers = {
@@ -12,11 +13,6 @@ var cssNumbers = {
   , widows: true
   , zIndex: true
   , zoom: true
-}
-var camelCase = function(str) {
-    return str.replace(/-([\da-z])/gi, function (all, letter) {
-        return letter.toUpperCase()
-    })
 }
 
 module.exports = function setCss(el, prop, val) {
