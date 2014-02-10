@@ -4,7 +4,6 @@ module.exports = {
     map: []
   , add: add
   , remove: remove
-  , getType: getType
 }
 
 function add(nonce, type, fn) {
@@ -26,7 +25,7 @@ function remove(nonce, type, fn) {
             return removeAll(nonce)
         case 1:
             return removeAllType(nonce, type)
-        case default:
+        default:
             return removeFn(nonce, type, fn)
     }
 }
