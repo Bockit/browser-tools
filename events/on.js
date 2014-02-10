@@ -2,31 +2,25 @@ var mouseEvents = require('./mouse-events')
 var keyEvents = require('./key-events')
 var normaliseMouse = require('./normalise/mouse')
 var normaliseKey = require('./normalise/key')
-var nonceGen = require('../utils/nonce')
-var map = require('./mapping')
+var tracker = require('./tracker')
+var nonce = require('./nonce')
 
 module.exports = function on(el, event, callback) {
-    if (!hasNonce(el)) addNonce(el, nonceGen())
+    if (!nonce.has(el)) nonce.set(el, nonce.gen())
+
+    var wrapped = callback
 
     if (mouseEvents.test(event)) {
-        callback = normaliseMouse(callback)
+         wrapped = normaliseMouse(callback)
     }
     else if (keyEvents.test(event)) {
-        callback = normaliseKey(callback)
+        wrapped = normaliseKey(callback)
     }
-    el.addEventListener(event, callback)
+
+    tracker.add(nonce.get(el), event, wrapped, callback)
+
+    var type = tracker.processType(event).type
+    el.addEventListener(type, wrapped)
 
     return el
-}
-
-function addNonce(el, n) {
-    el.__bt_nonce = n
-}
-
-function hasNonce(el) {
-    return !!el.__bt_nonce
-}
-
-function getNonce(el) {
-    return el.__bt_nonce
 }
