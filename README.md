@@ -43,6 +43,11 @@ To Do
 * Add DOM events `on(el, 'mousemove', function(){})`, `off(...)`, `once(...)` and something for delegating. I dunno yet how it'd work.
 * More traversal functions `closest()`, `nextUntil()`, `prevUntil()`
 
+To Do Events
+------------
+
+Events is going to be harder than I imagined. It looks like if we want to be able to do stuff like: 'click.namespaced', and off(element, 'type'), then we need to keep track of events that have been bound to which elements.
+
 Selector
 --------
 
