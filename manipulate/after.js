@@ -1,11 +1,11 @@
 var coerce = require('../utils/coerce-html-array')
 
-module.exports = function append(el, things) {
+module.exports = function after(el, things) {
     things = coerce(things)
 
-    for(var i = 0; i < things.length; i++) {
-        el.appendChild(things[i])
-    }
+    var next = next(el)
 
-    return things
+    for(var i = 0; i < things.length; i++) {
+        el.parentNode.insertBefore(things[i], next)
+    }
 }
