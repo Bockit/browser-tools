@@ -1,5 +1,5 @@
 module.exports = {
     serialise: require('./serialise')
-    serialize: require('./serialise')
-    value: require('value')
+  , serialize: require('./serialise')
+  , value: require('./value')
 }

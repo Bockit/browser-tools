@@ -11,22 +11,46 @@
     </head>
     <body>
 
-        <input type="checkbox" id="input-checkbox">
 
         <!-- Empty initially -->
         <input type="text" id="input-text">
         <input type="hidden" id="input-hidden">
         <input type="password" id="input-password">
+        <input type="checkbox" id="input-checkbox">
+        <input type="radio" id="input-radio">
         <textarea id="textarea"></textarea>
 
         <!-- Full initially -->
         <input type="text" id="input-text-valued" value="foo">
         <input type="hidden" id="input-hidden-valued" value="foo">
         <input type="password" id="input-password-valued" value="foo">
+        <input type="checkbox" id="input-checkbox-valued" value="foo">
+        <input type="radio" id="input-radio-valued" value="foo">
         <textarea id="textarea-valued">foo</textarea>
+
+        <!-- Select Boxes -->
+        <select id="select">
+            <option>Foo</option>
+        </select>
+        <select id="select-empty"></select>
+        <select id="select-valued">
+            <option value="bar">Foo</option>
+        </select>
+        <select id="select-multi" multiple>
+            <option>Foo</option>
+            <option>Bar</option>
+        </select>
+        <select id="select-multi-level">
+            <optgroup label="Quux">
+                <option>Foo</option>
+                <option>Bar</option>
+            </optgroup>
+            <optgroup label="Quuc">
+                <option>Baz</option>
+            </optgroup>
+        </select>
 
         <!-- Tests -->
         <script src="bundle.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </body>
 </html>

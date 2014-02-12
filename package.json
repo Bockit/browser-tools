@@ -1,7 +1,7 @@
 {
   "name": "browser-tools",
   "version": "0.0.0",
-  "description": "A modular set of browser tools. DOM manipulation, AJAX, DOM traversal.",
+  "description": "A modular set of browser tools. DOM manipulation, DOM traversal, Events, CSS, etc.",
   "main": "index.js",
   "scripts": {
     "test": "npm run test-bundle; npm run test-serve; npm run test-open",

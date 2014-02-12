@@ -1,3 +1,5 @@
+window.bt = require('../../index')
+
 var test = require('tape')
   , get = require('../../forms/value/get')
   , set = require('../../forms/value/set')
@@ -5,21 +7,28 @@ var test = require('tape')
         text: document.getElementById('input-text')
       , hidden: document.getElementById('input-hidden')
       , password: document.getElementById('input-password')
+      , checkbox: document.getElementById('input-checkbox')
+      , radio: document.getElementById('input-radio')
       , textarea: document.getElementById('textarea')
     }
   , valuedEls = {
         text: document.getElementById('input-text-valued')
       , hidden: document.getElementById('input-hidden-valued')
       , password: document.getElementById('input-password-valued')
+      , checkbox: document.getElementById('input-checkbox-valued')
+      , radio: document.getElementById('input-radio-valued')
       , textarea: document.getElementById('textarea-valued')
   }
-
-  console.log(valuedEls)
 
 test('Initially with no values', function(t) {
     for(var k in els) {
         var el = els[k]
-        t.equal(get(el), '', k + ' is an empty string')
+        if (k === 'checkbox' || k === 'radio') {
+            t.equal(get(el), 'on', k + ' is on')
+        }
+        else {
+            t.equal(get(el), '', k + ' is an empty string')
+        }
     }
 
     t.end()
