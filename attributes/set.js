@@ -1,5 +1,6 @@
 var remove = require('./remove')
 var properties = require('./properties')
+var setProperty = require('../properties/set')
 
 module.exports = function setAttribute(el, prop, val) {
     if (typeof prop === 'object') {
@@ -11,7 +12,7 @@ module.exports = function setAttribute(el, prop, val) {
         // @TODO if val is function
         // args are i and the attr
         if (properties.test(prop)) {
-            el.setAttribute(prop, prop)
+            setProperty(el, prop, true)
         }
         else {
             el.setAttribute(prop, '' + val)
