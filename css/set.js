@@ -22,8 +22,9 @@ module.exports = function setCss(el, prop, val) {
         }
     }
     else {
-        if (typeof val === 'number' && !(camelCase(prop) in cssNumbers))
+        if (typeof val === 'number' && !(camelCase(prop) in cssNumbers)) {
             val += 'px'
+        }
         // For camelcased properties
         var propertie = prefixed[prop] || prop
         el.style[propertie] = val
