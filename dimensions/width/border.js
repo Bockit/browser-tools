@@ -1,6 +1,8 @@
 var css = require('../../css/get')
 
-module.exports = function borderWidth(el) {
+module.exports = borderWidth
+
+function borderWidth(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'width'))
     }

@@ -1,6 +1,8 @@
 var get = require('../attributes/get')
 
-module.exports = function hasClass(el, cls) {
+module.exports = hasClass
+
+function hasClass(el, cls) {
     if (el.classList) return el.classList.contains(cls)
 
     // Shim for no classList

@@ -1,6 +1,8 @@
 var prefixed = /^(-webkit-|-moz-|-o-|-ms-)(.*)/
 
-module.exports = function buildPrefixMap() {
+module.exports = buildPrefixMap
+
+function buildPrefixMap() {
     var map = {}
     var properties = getComputedStyle(document.documentElement, null)
 

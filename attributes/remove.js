@@ -1,4 +1,6 @@
-module.exports = function removeAttr(el, prop) {
+module.exports = removeAttrribute
+
+function removeAttribute(el, prop) {
     el.removeAttribute(prop)
     return el
 }

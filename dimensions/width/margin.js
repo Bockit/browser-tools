@@ -1,6 +1,8 @@
 var css = require('../../css/get')
 
-module.exports = function marginWidth(el) {
+module.exports = marginWidth
+
+function marginWidth(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'width')) +
             parseFloat(css(el, 'margin-left')) +

@@ -1,6 +1,8 @@
 var toggleClass = require('./toggle')
 
-module.exports = function removeClass(el, cls) {
+module.exports = removeClass
+
+function removeClass(el, cls) {
     toggleClass(el, cls, false)
 
     return el

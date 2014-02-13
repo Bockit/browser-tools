@@ -15,7 +15,9 @@ var cssNumbers = {
   , zoom: true
 }
 
-module.exports = function setCss(el, prop, val) {
+module.exports = setCss
+
+function setCss(el, prop, val) {
     if (typeof prop === 'object') {
         for (var key in prop) {
             setCss(el, key, prop[key])

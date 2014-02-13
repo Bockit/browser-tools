@@ -1,6 +1,8 @@
 var css = require('../../css/get')
 
-module.exports = function contentHeight(el) {
+module.exports = contentHeight
+
+function contentHeight(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'height')) -
             parseFloat(css(el, 'padding-top')) -

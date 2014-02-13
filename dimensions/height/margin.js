@@ -1,6 +1,8 @@
 var css = require('../../css/get')
 
-module.exports = function marginHeight(el) {
+module.exports = marginHeight
+
+function marginHeight(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'height')) +
             parseFloat(css(el, 'margin-top')) +

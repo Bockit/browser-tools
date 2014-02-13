@@ -2,7 +2,9 @@ var remove = require('./remove')
 var properties = require('./properties')
 var setProperty = require('../properties/set')
 
-module.exports = function setAttribute(el, prop, val) {
+module.exports = setAttribute
+
+function setAttribute(el, prop, val) {
     if (typeof prop === 'object') {
         for (var key in prop) {
             setAttribute(el, key, prop[key])
