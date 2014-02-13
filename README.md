@@ -1,4 +1,4 @@
-**This is a work in progress, some of the code has never been run yet.**
+**This is a work in progress**
 
 Browser Tools
 -------------
@@ -21,7 +21,7 @@ Browser tools aims to provide the following functionality with a high granularit
 Support
 -------
 
-It's very poorly tests at the moment but the idea is to support IE9+ for now. Either making a separate polyfill module that shims in what's needed for browser-tools, or make ie8 versions of functions which don't work.
+It's very poorly tested at the moment but the idea is to support IE9+ for now. Either making a separate polyfill module that shims in what's needed for browser-tools, or make ie8 versions of functions which don't work.
 
 No AJAX
 -------
@@ -36,17 +36,11 @@ Because I think having a module for each function would have too much overhead. 
 To Do
 -----
 
-* Actually run the events and traversal functions to see if they work
-* Write the manipulation functions
+* Finish trigger
+* Add selector to events which checks if the event currentTarget matches
 * Set up a test suite and a process to run it across the supported browsers
 * Make the tests pass
-* Add DOM events `on(el, 'mousemove', function(){})`, `off(...)`, `once(...)` and something for delegating. I dunno yet how it'd work.
 * More traversal functions `closest()`, `nextUntil()`, `prevUntil()`
-
-To Do Events
-------------
-
-Events is going to be harder than I imagined. It looks like if we want to be able to do stuff like: 'click.namespaced', and off(element, 'type'), then we need to keep track of events that have been bound to which elements.
 
 Selector
 --------
