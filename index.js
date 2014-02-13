@@ -1,11 +1,15 @@
-exports['attributes'] = require('./attributes')
-exports['classes'] = require('./classes')
-exports['css'] = require('./css')
-exports['dimensions'] = require('./dimensions')
-exports['events'] = require('./events')
-exports['forms'] = require('./forms')
-exports['html'] = require('./html')
-exports['position'] = require('./position')
-exports['text'] = require('./text')
-exports['traversal'] = require('./traversal')
-exports['utils'] = require('./utils')
+BrowserTools = {}
+
+BrowserTools['attributes'] = require('./attributes')
+BrowserTools['classes'] = require('./classes')
+BrowserTools['css'] = require('./css')
+BrowserTools['dimensions'] = require('./dimensions')
+BrowserTools['events'] = require('./events')
+BrowserTools['forms'] = require('./forms')
+BrowserTools['html'] = require('./html')
+BrowserTools['position'] = require('./position')
+BrowserTools['text'] = require('./text')
+BrowserTools['traversal'] = require('./traversal')
+BrowserTools['utils'] = require('./utils')
+
+module.exports = BrowserTools
