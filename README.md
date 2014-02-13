@@ -40,7 +40,8 @@ To Do
 * Add selector to events which checks if the event currentTarget matches
 * Set up a test suite and a process to run it across the supported browsers
 * Make the tests pass
-* More traversal functions `closest()`, `nextUntil()`, `prevUntil()`
+* More traversal functions `nextUntil()`, `prevUntil()`
+* Improve the algorithm for `closest()` and `dimensions/`. Closest could loop parent by parent until found or null, and dimensions functions should call getComputedValue themselves just once.
 
 Selector
 --------
