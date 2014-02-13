@@ -3,8 +3,8 @@ var set = require('./set')
 
 module.exports = value
 
-value.getValue = get
-value.setValue = set
+value['getValue'] = get
+value['setValue'] = set
 
 function value(el, val) {
     return typeof val !== 'undefined'?

@@ -1,8 +1,5 @@
 // Height
-
-module.exports = {
-    content: require('./content')
-  , padding: require('./padding')
-  , border: require('./border')
-  , margin: require('./margin')
-}
+exports['content'] = require('./content')
+exports['padding'] = require('./padding')
+exports['border'] = require('./border')
+exports['margin'] = require('./margin')

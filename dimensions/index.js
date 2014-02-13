@@ -1,4 +1,2 @@
-module.exports = {
-    width: require('./width')
-  , height: require('./height')
-}
+exports['width'] = require('./width')
+exports['height'] = require('./height')

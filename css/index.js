@@ -3,8 +3,8 @@ var set = require('./set')
 
 module.exports = css
 
-css.getCss = get
-css.setCss = set
+css['getCss'] = get
+css['setCss'] = set
 
 function css(el, prop, val) {
     return typeof val !== 'undefined' || typeof prop === 'object' ?

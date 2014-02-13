@@ -3,8 +3,8 @@ var set = require('./set')
 
 module.exports = text
 
-text.getText = get
-text.setText = set
+text['getText'] = get
+text['setText'] = set
 
 function text(el, val) {
     return typeof val !== 'undefined'?

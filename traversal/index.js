@@ -1,10 +1,8 @@
-module.exports = {
-    children: require('./children')
-  , nextAll: require('./next-all')
-  , next: require('./next')
-  , parent: require('./parent')
-  , parents: require('./parents')
-  , prevAll: require('./prev-all')
-  , prev: require('./prev')
-  , siblings: require('./siblings')
-}
+exports['children'] = require('./children')
+exports['nextAll'] = require('./next-all')
+exports['next'] = require('./next')
+exports['parent'] = require('./parent')
+exports['parents'] = require('./parents')
+exports['prevAll'] = require('./prev-all')
+exports['prev'] = require('./prev')
+exports['siblings'] = require('./siblings')

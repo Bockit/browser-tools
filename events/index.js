@@ -1,6 +1,4 @@
-module.exports = {
-    on: require('./on')
-  , off: require('./off')
-  , once: require('./once')
-  , trigger: require('./trigger')
-}
+exports['on'] = require('./on')
+exports['off'] = require('./off')
+exports['once'] = require('./once')
+exports['trigger'] = require('./trigger')

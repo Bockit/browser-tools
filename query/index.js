@@ -1,8 +1,6 @@
-module.exports = {
-    all: require('./all')
-  , 'class': require('./class')
-  , id: require('./id')
-  , matches: require('./matches')
-  , one: require('./one')
-  , tag: require('./')
-}
+exports['all'] = require('./all')
+exports['class'] = require('./class')
+exports['id'] = require('./id')
+exports['matches'] = require('./matches')
+exports['one'] = require('./one')
+exports['tag'] = require('./')

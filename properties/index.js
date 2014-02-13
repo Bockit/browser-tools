@@ -1,12 +1,12 @@
 var get = require('./get')
 var set = require('./set')
 
-module.exports = css
+module.exports = property
 
-css.getCss = get
-css.setCss = set
+css['getProperty'] = get
+css['setProperty'] = set
 
-function css(el, prop, val) {
+function property(el, prop, val) {
     return typeof val !== 'undefined' || typeof prop === 'object' ?
         set(el, prop, val) :
         get(el, prop)

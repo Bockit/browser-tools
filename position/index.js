@@ -1,6 +1,4 @@
-module.exports = {
-    offset: require('./offset')
-  , offsetParent: require('./offsetParent')
-  , position: require('./position')
-  , relative: require('./relative')
-}
+exports['offset'] = require('./offset')
+exports['offsetParent'] = require('./offsetParent')
+exports['position'] = require('./position')
+exports['relative'] = require('./relative')

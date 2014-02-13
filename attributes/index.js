@@ -5,10 +5,10 @@ var properties = require('./properties')
 
 module.exports = attr
 
-attr.getAttr    = get
-attr.setAttr    = set
-attr.removeAttr = remove
-attr.properties = properties
+attr['getAttr']    = get
+attr['setAttr']    = set
+attr['removeAttr'] = remove
+attr['properties'] = properties
 
 function attr(el, prop, val) {
     return typeof val !== 'undefined' || typeof prop === 'object' ?

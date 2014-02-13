@@ -1,5 +1,3 @@
-module.exports = {
-    serialise: require('./serialise')
-  , serialize: require('./serialise')
-  , value: require('./value')
-}
+exports['serialise'] = require('./serialise')
+exports['serialize'] = require('./serialise')
+exports['value'] = require('./value')
