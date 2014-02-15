@@ -39,7 +39,6 @@ To Do
 
 * Set up a test suite and a process to run it across the supported browsers
 * Make the tests pass
-* More traversal functions `nextUntil()`, `prevUntil()`
 * Improve the algorithm for `closest()` and `dimensions/`. Closest could loop parent by parent until found or null, and dimensions functions should call getComputedValue themselves just once.
 
 Selector

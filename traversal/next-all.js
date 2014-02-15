@@ -4,10 +4,10 @@ module.exports = nextAll
 
 function nextAll(el) {
     var els = []
-    do {
+    el = next(el)
+    while(el) {
+        els.push(el)
         el = next(el)
-        if (el) els.push(el)
-    } while (el)
-
+    }
     return els
 }
