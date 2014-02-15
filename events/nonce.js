@@ -19,5 +19,5 @@ function get(el) {
 
 var id = 1
 function gen() {
-    return id++
+    return '' + (id++)
 }

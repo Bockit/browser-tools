@@ -15,19 +15,20 @@ function on(el, event, selector, callback) {
         callback = selector
         selector = null
     }
+    var processed = tracker.processType(event)
+      , type = processed.type
+      , namespace = processed.namespace
 
     wrapped = selector ? delegate(callback, selector) : callback
 
-    if (mouseEvents.test(event)) {
+    if (mouseEvents.test(type)) {
          wrapped = normaliseMouse(wrapped)
     }
-    else if (keyEvents.test(event)) {
+    else if (keyEvents.test(type)) {
         wrapped = normaliseKey(wrapped)
     }
 
-    tracker.add(nonce.get(el), event, wrapped, callback)
-
-    var type = tracker.processType(event).type
+    tracker.add(nonce.get(el), type, namespace, selector, wrapped, callback)
     el.addEventListener(type, wrapped)
 
     return el

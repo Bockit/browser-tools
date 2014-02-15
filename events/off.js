@@ -3,20 +3,26 @@ nonce = require('./nonce')
 
 module.exports = off
 
-function off(el, event, callback) {
+function off(el, event, selector, callback) {
     var remove = []
+      , processed = tracker.processType(event)
+      , type = processed.type
+      , namespace = processed.namespace
 
-    if (arguments.length >= 3) {
-        remove = tracker.removeFn(nonce.get(el), event, callback)
+    if (arguments.length === 3 && typeof selector === 'function') {
+        callback = selector
+        selector = null
     }
-    else if (arguments.length === 2) {
-        remove = tracker.removeType(nonce.get(el), event)
-    }
-    else {
-        remove = tracker.remove(nonce.get(el))
+    else if (arguments.length === 3 && typeof selector === 'string') {
+        selector = callback
+        callback = null
     }
 
-    var type = tracker.processType(event).type
+    selector = selector || null
+    callback = callback || null
+
+    remove = tracker.remove(nonce.get(el), type, namespace, selector, callback)
+
     for (var i = 0; i < remove.length; i++) {
         el.removeEventListener(type, remove[i])
     }
