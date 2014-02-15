@@ -1,0 +1,1 @@
+module.exports = /^(?:click|dblclick|mousedown|mouseup|mouseover|mousemove|mouseout|dragstart|drag|dragenter|dragleave|dragover|drop|dragend|keydown|keypress|keyup|load|unload|abort|error|resize|scroll|select|change|submit|reset|focus|blur|focusin|focusout)$/i

@@ -37,7 +37,6 @@ Because I think having a module for each function would have too much overhead. 
 To Do
 -----
 
-* Finish trigger
 * Add selector to events which checks if the event currentTarget matches
 * Set up a test suite and a process to run it across the supported browsers
 * Make the tests pass
