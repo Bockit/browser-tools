@@ -1,4 +1,6 @@
-module.exports = function queryClass(el, query) {
+module.exports = queryId
+
+function queryId(el, query) {
     if (arguments.length === 1) {
         query = el
     }

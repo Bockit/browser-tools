@@ -1,3 +1,5 @@
-module.exports = function startsWith(str, val) {
+module.exports = startsWith
+
+function startsWith(str, val) {
     return str.slice(val.length) === val
 }

@@ -1,3 +1,5 @@
-module.exports = function prev(el) {
+module.exports = prev
+
+function prev(el) {
     return el.prevElementSibling
 }

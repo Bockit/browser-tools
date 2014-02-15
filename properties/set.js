@@ -1,4 +1,6 @@
-module.exports = function setProperty(el, prop, val) {
+module.exports = setProperty
+
+function setProperty(el, prop, val) {
     if (typeof prop === 'object') {
         for (var key in prop) {
             setProperty(el, key, prop[key])

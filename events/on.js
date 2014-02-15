@@ -5,7 +5,9 @@ var normaliseKey = require('./normalise/key')
 var tracker = require('./tracker')
 var nonce = require('./nonce')
 
-module.exports = function on(el, event, callback) {
+module.exports = on
+
+function on(el, event, callback) {
     if (!nonce.has(el)) nonce.set(el, nonce.gen())
 
     var wrapped = callback

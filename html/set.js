@@ -1,4 +1,6 @@
-module.exports = function setHtml(el, val) {
+module.exports = setHtml
+
+function setHtml(el, val) {
     el.innerHTML = val
     return el
 }

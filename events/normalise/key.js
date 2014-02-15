@@ -1,4 +1,6 @@
-module.exports = function(callback) {
+module.exports = normaliseKey
+
+function normaliseKey(callback) {
     return function(ev) {
         if (ev.fixed) return callback.call(null, ev)
 

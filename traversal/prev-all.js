@@ -1,6 +1,8 @@
 var prev = require('./prev')
 
-module.exports = function prevAll(el) {
+module.exports = prevAll
+
+function prevAll(el) {
     var els = []
     do {
         el = prev(el)

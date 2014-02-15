@@ -1,13 +1,17 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var prefixed = require('./prefix-map')()
 
-module.exports = function getCss(el, prop) {
+module.exports = getCss
+
+function getCss(el, prop) {
     return getComputedStyle(el, null).getPropertyValue(prefixed[prop])
 }
 },{"./prefix-map":2}],2:[function(require,module,exports){
 var prefixed = /^(-webkit-|-moz-|-o-|-ms-)(.*)/
 
-module.exports = function buildPrefixMap() {
+module.exports = buildPrefixMap
+
+function buildPrefixMap() {
     var map = {}
     var properties = getComputedStyle(document.documentElement, null)
 
@@ -26,7 +30,9 @@ module.exports = function buildPrefixMap() {
 },{}],3:[function(require,module,exports){
 var css = require('../../css/get')
 
-module.exports = function borderHeight(el) {
+module.exports = borderHeight
+
+function borderHeight(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'height'))
     }
@@ -40,7 +46,9 @@ module.exports = function borderHeight(el) {
 },{"../../css/get":1}],4:[function(require,module,exports){
 var css = require('../../css/get')
 
-module.exports = function contentHeight(el) {
+module.exports = contentHeight
+
+function contentHeight(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'height')) -
             parseFloat(css(el, 'padding-top')) -
@@ -53,17 +61,16 @@ module.exports = function contentHeight(el) {
 }
 },{"../../css/get":1}],5:[function(require,module,exports){
 // Height
-
-module.exports = {
-    content: require('./content')
-  , padding: require('./padding')
-  , border: require('./border')
-  , margin: require('./margin')
-}
+exports['content'] = require('./content')
+exports['padding'] = require('./padding')
+exports['border'] = require('./border')
+exports['margin'] = require('./margin')
 },{"./border":3,"./content":4,"./margin":6,"./padding":7}],6:[function(require,module,exports){
 var css = require('../../css/get')
 
-module.exports = function marginHeight(el) {
+module.exports = marginHeight
+
+function marginHeight(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'height')) +
             parseFloat(css(el, 'margin-top')) +
@@ -81,7 +88,9 @@ module.exports = function marginHeight(el) {
 },{"../../css/get":1}],7:[function(require,module,exports){
 var css = require('../../css/get')
 
-module.exports = function paddingHeight(el) {
+module.exports = paddingHeight
+
+function paddingHeight(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'height')) -
             parseFloat(css(el, 'border-top-width')) -
@@ -95,7 +104,9 @@ module.exports = function paddingHeight(el) {
 },{"../../css/get":1}],8:[function(require,module,exports){
 var css = require('../../css/get')
 
-module.exports = function borderWidth(el) {
+module.exports = borderWidth
+
+function borderWidth(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'width'))
     }
@@ -109,7 +120,9 @@ module.exports = function borderWidth(el) {
 },{"../../css/get":1}],9:[function(require,module,exports){
 var css = require('../../css/get')
 
-module.exports = function contentWidth(el) {
+module.exports = contentWidth
+
+function contentWidth(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'width')) -
             parseFloat(css(el, 'padding-left')) -
@@ -122,17 +135,16 @@ module.exports = function contentWidth(el) {
 }
 },{"../../css/get":1}],10:[function(require,module,exports){
 // Width
-
-module.exports = {
-    content: require('./content')
-  , padding: require('./padding')
-  , border: require('./border')
-  , margin: require('./margin')
-}
+exports['content'] = require('./content')
+exports['padding'] = require('./padding')
+exports['border'] = require('./border')
+exports['margin'] = require('./margin')
 },{"./border":8,"./content":9,"./margin":11,"./padding":12}],11:[function(require,module,exports){
 var css = require('../../css/get')
 
-module.exports = function marginWidth(el) {
+module.exports = marginWidth
+
+function marginWidth(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'width')) +
             parseFloat(css(el, 'margin-left')) +
@@ -150,7 +162,9 @@ module.exports = function marginWidth(el) {
 },{"../../css/get":1}],12:[function(require,module,exports){
 var css = require('../../css/get')
 
-module.exports = function paddingHeight(el) {
+module.exports = paddingHeight
+
+function paddingHeight(el) {
     if (css(el, 'box-sizing') === 'border-box') {
         return parseFloat(css(el, 'width')) -
             parseFloat(css(el, 'border-left-width')) -

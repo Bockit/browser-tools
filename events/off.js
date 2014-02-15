@@ -1,7 +1,9 @@
 tracker = require('./tracker')
 nonce = require('./nonce')
 
-module.exports = function off(el, event, callback) {
+module.exports = off
+
+function off(el, event, callback) {
     var remove = []
 
     if (arguments.length >= 3) {

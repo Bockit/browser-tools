@@ -1,4 +1,6 @@
-module.exports = function setText(el, val) {
+module.exports = setText
+
+function setText(el, val) {
     el.textContent = val
     return el
 }

@@ -1,6 +1,8 @@
 var next = require('./next')
 
-module.exports = function nextAll(el) {
+module.exports = nextAll
+
+function nextAll(el) {
     var els = []
     do {
         el = next(el)

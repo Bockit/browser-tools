@@ -1,4 +1,6 @@
-module.exports = function queryTag(el, query) {
+module.exports = queryTag
+
+function queryTag(el, query) {
     if (arguments.length === 1) {
         query = el
         el = document

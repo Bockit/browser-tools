@@ -1,4 +1,6 @@
-module.exports = function(callback) {
+module.exports = normaliseMouse
+
+function normaliseMouse(callback) {
     return function(ev) {
         if (ev.fixed) return callback.call(null, ev)
 

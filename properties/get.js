@@ -1,3 +1,5 @@
-module.exports = function getProperty(el, prop) {
+module.exports = getProperty
+
+function getProperty(el, prop) {
     return el[prop]
 }

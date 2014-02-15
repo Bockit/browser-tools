@@ -1,3 +1,5 @@
-module.exports = function seraliseForm(el) {
+module.exports = serialiseForm
+
+function serialiseForm(el) {
 
 }

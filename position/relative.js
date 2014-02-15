@@ -1,6 +1,8 @@
 var position = require('./position')
 
-module.exports = function(el, from) {
+module.exports = relative
+
+function relative(el, from) {
     var posEl = position(el)
     var posFrom = position(from)
 

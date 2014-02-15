@@ -1,3 +1,5 @@
-module.exports = function getHtml(el) {
+module.exports = getHtml
+
+function getHtml(el) {
     return el.innerHTML
 }

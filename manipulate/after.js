@@ -1,6 +1,8 @@
 var coerce = require('../utils/coerce-html-array')
 
-module.exports = function after(el, things) {
+module.exports = after
+
+function after(el, things) {
     things = coerce(things)
 
     var next = next(el)

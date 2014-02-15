@@ -10,12 +10,13 @@ Browser tools is designed with browserify in mind, where it will only build the 
 Browser tools aims to provide the following functionality with a high granularity:
 
 * Attributes getting, setting and removing
+* Properties getting and setting (selected, multiple, checked etc.)
 * ClassList-like functionality
 * CSS getting and setting
 * Element dimension calculations
+* Element position calculations
 * Events
 * DOM Manipulation
-* Element position calculations
 * DOM Traversal
 
 Support

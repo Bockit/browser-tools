@@ -1,6 +1,8 @@
 var parent = require('./parent')
 
-module.exports = function parents(el) {
+module.exports = parents
+
+function parents(el) {
     var els = []
     do {
         el = parent(el)

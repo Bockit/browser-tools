@@ -1,7 +1,9 @@
 var coerce = require('../utils/coerce-html-array')
 var children = require('./children')
 
-module.exports = function insert(el, index, things) {
+module.exports = insert
+
+function insert(el, index, things) {
     things = coerce(things)
 
     var signpost = children(el)[index]

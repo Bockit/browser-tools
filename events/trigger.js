@@ -1,4 +1,6 @@
-module.exports = function trigger(el, type, data) {
+module.exports = trigger
+
+function trigger(el, type, data) {
     data = data || {}
     ev = makeEvent(type, data)
     el.dispatchEvent(ev)
