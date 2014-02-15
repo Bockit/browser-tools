@@ -37,7 +37,7 @@ Because I think having a module for each function would have too much overhead. 
 To Do
 -----
 
-* Add selector to events which checks if the event currentTarget matches
+* Event Delegation
 * Set up a test suite and a process to run it across the supported browsers
 * Make the tests pass
 * More traversal functions `nextUntil()`, `prevUntil()`
@@ -48,4 +48,4 @@ Selector
 
 This project works well with [selector][selector]
 
-[selector]: /Bockit/selector
+[selector]: https://github.com/Bockit/selector
