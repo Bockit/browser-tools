@@ -3,8 +3,8 @@ var set = require('./set')
 
 module.exports = property
 
-css['getProperty'] = get
-css['setProperty'] = set
+property['getProperty'] = get
+property['setProperty'] = set
 
 function property(el, prop, val) {
     return typeof val !== 'undefined' || typeof prop === 'object' ?
