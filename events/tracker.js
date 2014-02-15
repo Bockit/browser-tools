@@ -1,16 +1,13 @@
 // Browser tools event mapping
 var map = {}
 
-module.exports = {
-    map: map
-  , add: add
-  , remove: remove
-  , processType: processType
-}
+exports['map'] = map
+exports['add'] = add
+exports['remove'] = remove
+exports['processType'] = processType
 
 function add(nonce, type, namespace, selector, wrapped, fn) {
     if (!map[nonce]) map[nonce] = {}
-
     if (!map[nonce][type]) map[nonce][type] = []
 
     map[nonce][type].push({
