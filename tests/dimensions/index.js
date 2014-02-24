@@ -1,6 +1,13 @@
-var test = require('tape')
-  , width = require('../dimensions/width')
-  , height = require('../dimensions/height')
+var test = require('tape').createHarness()
+  , width = require('../../dimensions/width')
+  , height = require('../../dimensions/height')
+  , concat = require('concat-stream')
+  , parent = require('postie')(window.parent)
+
+var out = concat(function(output) {
+    parent.post('tap', output)
+})
+test.createStream().pipe(out)
 
 function get(id) { return document.getElementById(id) }
 function dimensions(id, axis) {

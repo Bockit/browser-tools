@@ -1,6 +1,4 @@
-window.bt = require('../../index')
-
-var test = require('tape')
+var test = require('tape').createHarness()
   , get = require('../../forms/value/get')
   , set = require('../../forms/value/set')
   , els = {
@@ -18,7 +16,14 @@ var test = require('tape')
       , checkbox: document.getElementById('input-checkbox-valued')
       , radio: document.getElementById('input-radio-valued')
       , textarea: document.getElementById('textarea-valued')
-  }
+    }
+  , concat = require('concat-stream')
+  , parent = require('postie')(window.parent)
+
+var out = concat(function(output) {
+    parent.post('tap', output)
+})
+test.createStream().pipe(out)
 
 test('Initially with no values', function(t) {
     for(var k in els) {
