@@ -1,4 +1,10 @@
 // Browser tools event mapping
+// Nonce is first key, which is an object with types for keys.
+// Each type key's value is an array of {namespace, selector, wrapped, fn}
+// Wrapped is the actual function attached to the element, has stuff like
+// normalisation.
+// fn is the function that was passed into on, lets us removed based on ref
+// later, as the user doesn't have a ref to wrapped.
 var map = {}
 
 exports['map'] = map

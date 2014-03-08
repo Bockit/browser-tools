@@ -28,8 +28,8 @@ function setCss(el, prop, val) {
             val += 'px'
         }
         // For camelcased properties
-        var propertie = prefixed[prop] || prop
-        el.style[propertie] = val
+        var property = prefixed[prop] || prop
+        el.style[property] = val
     }
     return el
 }

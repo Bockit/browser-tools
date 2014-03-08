@@ -16,6 +16,7 @@ function normaliseMouse(callback) {
 }
 
 function cleanWhich(ev) {
+    // From jQuery
     return (ev.button & 1 ? 1 : (ev.button & 2 ? 3 : (ev.button & 4 ? 2 : 0)));
 }
 

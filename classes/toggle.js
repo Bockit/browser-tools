@@ -10,7 +10,7 @@ function toggleClass(el, cls, toggle) {
     }
 
     var classes = get(el, 'class') || ''
-    // Remove it
+    // Remove it by default, then add if we're toggling
     classes = classes
         .replace(new RegExp('\\b' + cls + '\\b'), '')
         .replace(/\s\s+/g, '')

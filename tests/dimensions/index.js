@@ -271,80 +271,80 @@ test('Display none', function(t) {
     t.end()
 })
 
-test('Detached', function(t) {
+// test('Detached', function(t) {
 
-    function createDiv(boxSizing) {
-        var div = document.createElement('div')
-        div.style.width = '50px'
-        div.style.height = '50px'
-        div.style.padding = '10px'
-        div.style.margin = '10px'
-        div.style.borderStyle = 'solid'
-        div.style.borderWidth = '10px'
-        div.style.oBoxSizing = boxSizing
-        div.style.webkitBoxSizing = boxSizing
-        div.style.mozBoxSizing = boxSizing
-        div.style.msBoxSizing = boxSizing
-        div.style.boxSizing = boxSizing
+//     function createDiv(boxSizing) {
+//         var div = document.createElement('div')
+//         div.style.width = '50px'
+//         div.style.height = '50px'
+//         div.style.padding = '10px'
+//         div.style.margin = '10px'
+//         div.style.borderStyle = 'solid'
+//         div.style.borderWidth = '10px'
+//         div.style.oBoxSizing = boxSizing
+//         div.style.webkitBoxSizing = boxSizing
+//         div.style.mozBoxSizing = boxSizing
+//         div.style.msBoxSizing = boxSizing
+//         div.style.boxSizing = boxSizing
 
-        return div
-    }
+//         return div
+//     }
 
-    function detachedDimensions(el, axis) {
-        return {
-            content: axis.content(el)
-          , padding: axis.padding(el)
-          , border: axis.border(el)
-          , margin: axis.margin(el)
-        }
-    }
+//     function detachedDimensions(el, axis) {
+//         return {
+//             content: axis.content(el)
+//           , padding: axis.padding(el)
+//           , border: axis.border(el)
+//           , margin: axis.margin(el)
+//         }
+//     }
 
-    var border = createDiv('border-box')
-    var content = createDiv('content-box')
+//     var border = createDiv('border-box')
+//     var content = createDiv('content-box')
 
-    t.test('Widths in border-box', function(st) {
-        var d = detachedDimensions(border, width)
+//     t.test('Widths in border-box', function(st) {
+//         var d = detachedDimensions(border, width)
 
-        st.equal(isNaN(d.content), true, 'content')
-        st.equal(isNaN(d.padding), true, 'padding')
-        st.equal(isNaN(d.border), true, 'border')
-        st.equal(isNaN(d.margin), true, 'margin')
+//         st.equal(isNaN(d.content), true, 'content')
+//         st.equal(isNaN(d.padding), true, 'padding')
+//         st.equal(isNaN(d.border), true, 'border')
+//         st.equal(isNaN(d.margin), true, 'margin')
 
-        st.end()
-    })
+//         st.end()
+//     })
 
-    t.test('Widths in content-box', function(st) {
-        var d = detachedDimensions(content, height)
+//     t.test('Widths in content-box', function(st) {
+//         var d = detachedDimensions(content, height)
 
-        st.equal(isNaN(d.content), true, 'content')
-        st.equal(isNaN(d.padding), true, 'padding')
-        st.equal(isNaN(d.border), true, 'border')
-        st.equal(isNaN(d.margin), true, 'margin')
+//         st.equal(isNaN(d.content), true, 'content')
+//         st.equal(isNaN(d.padding), true, 'padding')
+//         st.equal(isNaN(d.border), true, 'border')
+//         st.equal(isNaN(d.margin), true, 'margin')
 
-        st.end()
-    })
+//         st.end()
+//     })
 
-    t.test('Heights in border-box', function(st) {
-        var d = detachedDimensions(border, width)
+//     t.test('Heights in border-box', function(st) {
+//         var d = detachedDimensions(border, width)
 
-        st.equal(isNaN(d.content), true, 'content')
-        st.equal(isNaN(d.padding), true, 'padding')
-        st.equal(isNaN(d.border), true, 'border')
-        st.equal(isNaN(d.margin), true, 'margin')
+//         st.equal(isNaN(d.content), true, 'content')
+//         st.equal(isNaN(d.padding), true, 'padding')
+//         st.equal(isNaN(d.border), true, 'border')
+//         st.equal(isNaN(d.margin), true, 'margin')
 
-        st.end()
-    })
+//         st.end()
+//     })
 
-    t.test('Heights in content-box', function(st) {
-        var d = detachedDimensions(content, height)
+//     t.test('Heights in content-box', function(st) {
+//         var d = detachedDimensions(content, height)
 
-        st.equal(isNaN(d.content), true, 'content')
-        st.equal(isNaN(d.padding), true, 'padding')
-        st.equal(isNaN(d.border), true, 'border')
-        st.equal(isNaN(d.margin), true, 'margin')
+//         st.equal(isNaN(d.content), true, 'content')
+//         st.equal(isNaN(d.padding), true, 'padding')
+//         st.equal(isNaN(d.border), true, 'border')
+//         st.equal(isNaN(d.margin), true, 'margin')
 
-        st.end()
-    })
+//         st.end()
+//     })
 
-    t.end()
-})
+//     t.end()
+// })
