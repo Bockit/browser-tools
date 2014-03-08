@@ -29,10 +29,10 @@ No AJAX
 
 There are plenty of modules for doing AJAX.
 
-Why one module
---------------
+What modules will exist?
+------------------------
 
-Because I think having a module for each function would have too much overhead. It's made so that if you compile your code with something like browserify and use specific requires it will only include exactly what is used.
+Each folder in the repo will become its own module, and then there'll be an alias module that provides all of them in one go if you so chose.
 
 To Do
 -----
