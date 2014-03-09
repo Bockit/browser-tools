@@ -9,6 +9,7 @@ var counter = 0
         'dimensions'
       , 'forms'
       , 'properties'
+      , 'classes'
     ]
 
 console.log('Building modules...')

@@ -1,7 +1,7 @@
 var postie = require('postie')
 var parser = require('tap-parser')
 var through = require('through')
-var tests = ['dimensions', 'forms', 'properties']
+var tests = ['dimensions', 'forms', 'properties', 'classes']
 
 tests.forEach(runTest)
 
