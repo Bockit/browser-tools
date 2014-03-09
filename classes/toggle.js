@@ -1,9 +1,12 @@
 var get = require('../attributes/get')
 var set = require('../attributes/set')
+var has = require('./has')
 
 module.exports = toggleClass
 
 function toggleClass(el, cls, toggle) {
+    if (typeof toggle === 'undefined') toggle = !has(el, cls)
+
     if (el.classList) {
         el.classList.toggle(cls, toggle)
         return el
